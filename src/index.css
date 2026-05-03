@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=JetBrains+Mono:wght@300;400;500&family=Noto+Sans+SC:wght@100..900&family=Noto+Serif+SC:wght@200..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Noto Sans SC", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", "Noto Serif SC", serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-brand-primary: #1a1a1a;
+  --color-brand-accent: #1a1a1a;
+  --color-paper: #f8f7f4;
+  --color-ink: #1a1a1a;
+  --color-line: #dcdad5;
+  --color-preview-bg: #ebeae6;
+  --color-muted: #8c8a82;
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--color-paper)] text-[var(--color-ink)] font-sans antialiased;
+  }
+}
+
+/* LaTeX Preview Styles */
+.latex-preview {
+  font-family: 'Times New Roman', serif; /* Classic preview default */
+  line-height: 1.5;
+}
+
+.latex-preview header h1 {
+  font-family: var(--font-display);
+}
